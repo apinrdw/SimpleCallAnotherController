@@ -6,5 +6,6 @@ class HomeController < ApplicationController
     controller.request = ActionDispatch::Request.new(request.env)
     controller.response = ActionDispatch::Response.new
     controller.create
+    redirect_to controller.response.location
   end
 end
