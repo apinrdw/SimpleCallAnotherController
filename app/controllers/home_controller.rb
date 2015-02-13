@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     controller.params = the_params
     controller.request = ActionDispatch::Request.new(request.env)
     controller.response = ActionDispatch::Response.new
-    controller.create
+    controller.process(:create)
     redirect_to controller.response.location
   end
 end
